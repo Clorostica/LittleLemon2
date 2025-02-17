@@ -1,0 +1,910 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-color: #edefee;
+  color: rgba(0, 0, 0, 0.586);
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box; /* Aplica box-sizing a body */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* Todos los elementos heredan box-sizing */
+}
+
+h1,h2{
+  color: #f4ce13;
+  font-size: 2.5rem;
+}
+
+header > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Centra los elementos */
+  padding: 20px;
+}
+
+section {
+  width: calc(33.33% - 20px); 
+  background: #ffffff;
+  text-align: center;
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.divmenu {
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  display: block; /* Convierte el elemento en bloque */
+  margin: 0 auto; /* Centra horizontalmente */
+  width: 310px; /* Ancho del logo */
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1; 
+}
+
+article p {
+  font-size: 16px;
+  color: #444;
+  line-height: 24px;
+  margin: 20px 0;
+}
+
+.section_img {
+  width: 100%;
+  max-width: 350px; /* Ajusta el tamaño máximo */
+  height: auto; /* El alto depende del aspect ratio */
+  aspect-ratio: 16/9; /* Define una relación de aspecto fija (por ejemplo, 16:9) */
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.section_img img {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+  height: 100%; /* Hace que la imagen ocupe toda la altura del contenedor */
+  object-fit: cover; /* Hace que la imagen cubra completamente el área sin distorsionarse */
+  transition: transform 0.3s ease;
+}
+
+.section_img:hover img {
+  transform: scale(1.05);
+}
+
+/* Nav */
+#navbar {
+  transition: background-color 0.3s ease;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.nav__link {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px; 
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+.nav__links:visited {
+  color: #696969; /* Set the same color for visited links */
+}
+.nav__link--menu {
+  background-color: #000000;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s;
+}
+
+.nav__link--menu.show {
+  opacity: 1;
+  visibility: visible;
+}
+.nav__links{
+  text-decoration: none;
+}
+.nav__items {
+  display: flex;
+  margin: 20px 0; 
+}
+.nav__close {
+  display: none; 
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  filter: invert(1); 
+}
+.nav__menu {
+  cursor: pointer;
+  display: none;
+}
+
+.nav__img {
+  width: 30px;
+  display: none;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f4ce13;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+.hover-underline-animation.left::after {
+  transform-origin: bottom right;
+}
+
+.hover-underline-animation.left:hover::after {
+  transform-origin: bottom left;
+}
+/* Promo */
+.promo-container {
+  position: relative;
+  background-image: url('/img/foodex.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 530px; /* Altura del contenedor */
+  display: flex;
+  flex-direction: column; /* Alineamos los elementos en una columna */
+  justify-content: center; /* Centrado vertical */
+  align-items: center; /* Centrado horizontal */
+  text-align: center; /* Centra el texto */
+  padding: 0 20px; /* Opcional: para añadir un poco de espacio en los bordes */
+}
+/* Contenedor de la promoción */
+.promo-background {
+  position: relative;
+  width: 70%;
+  height: 350px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro para la caja */
+  border-radius: 10px;
+  color: #ffffff;
+  z-index: 2; /* Colocamos el contenido por encima del fondo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  text-align: center; /* Centra el texto dentro */
+}
+
+.promo-container h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #FFC107;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 0.8s ease-out forwards 0.2s;
+  z-index: 3; /* Mantiene el título encima del fondo negro */
+}
+
+.promo-container p {
+  width: 80%; 
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  line-height: 1.6;
+  margin: 10px auto; 
+  opacity: 1;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards 0.5s;
+  z-index: 3; 
+}
+
+/* Botón */
+.btn, .btn2 {
+  font-family: "Poppins", sans-serif;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #f4ce13;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 4;
+  margin-top: 20px; /* Espacio entre el texto y el botón */
+}
+
+.btn:hover {
+  background-color: #000000;
+  transform: scale(1.05); /* Aumento de tamaño */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Efecto de sombra */
+}
+
+
+/* Animación para el fade-in */
+@keyframes fadeInUp {
+0% {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+.menubutton1 {
+  background-color: #000000;
+  color: #f4ce13;
+}
+
+.menubutton1:hover {
+  color: #000;
+  background-color: #f4ce13;
+}
+.menubutton2 {
+  background-color: #f4ce13;
+  color: #000000;
+}
+.menubutton2:hover {
+  background-color: #000000;
+  color: #f4ce13;
+}
+
+.menubutton1,
+.menubutton2 {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  display: flex; 
+  justify-content: center; /* Centra el texto horizontalmente */
+  align-items: center; /* Centra el texto verticalmente */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  z-index: 10;
+  transition: background-color 0.3s;
+  text-align: center;
+  width: auto; /* Asegura que el ancho se ajuste al contenido */
+  height: auto; /* Asegura que la altura se ajuste al contenido */
+}
+
+.menubutton1:hover,
+.menubutton2:hover {
+  transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Efecto de sombra */
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.carousel-container {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-post {
+  min-width: 100%;
+  position: relative;
+  text-align: center;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-post img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.carousel-text {
+  width: 70%;
+  padding-bottom: 20px;
+  padding-top:20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color:#ffffff;
+}
+
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+}
+.carousel-prev { left: 10px; }
+.carousel-next { right: 10px; }
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+.carousel-dots span {
+  height: 10px;
+  width: 10px;
+  margin: 5px;
+  background-color: #bbb;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.carousel-dots .active {
+  background-color: #f4ce13;
+}
+/* footer */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor principal del footer */
+.footer__container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* Alineamos el contenido a la izquierda */
+  position: relative; /* Necesario para usar el posicionamiento relativo del formulario */
+}
+
+/* Logo en el footer */
+.footer__img {
+  width: 500px; /* Ajusta el tamaño del logo */
+  margin-bottom: 20px; /* Da espacio debajo del logo */
+}
+
+/* Contenedor para los enlaces de navegación */
+.nav--footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 50px; /* Espacio entre el nav y el formulario */
+}
+
+
+/* Lista de enlaces de navegación */
+.nav__link--footer {
+  display: flex;
+ /* Enlaces apilados verticalmente */
+}
+
+/* Estilo de los enlaces */
+.nav__items a {
+  text-decoration: none;
+  color: #f4ce13;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav__items a:hover {
+  color: #000000;
+}
+
+.footer__form {
+  position: absolute; /* Hace que el formulario se posicione sobre el contenedor */
+  top: 60px; /* Ajusta la distancia desde el top (ajusta según lo necesites) */
+  right: 20px; /* Se posiciona a la derecha del contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+  width: 500px; /* Ajusta el tamaño del formulario */
+  text-align: center;
+}
+
+.footer__newsletter {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer__inputs {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer__input {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #f4ce13;
+  padding: 10px;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.footer__submit {
+  width: 150px;
+  border-radius: 25px;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  background: #f4ce13;
+  color: #000;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.footer__submit:hover {
+  background: #e0b800;
+}
+
+/* Estilos de los iconos de redes sociales */
+.footer__social {
+  background: #111111;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 20px;
+}
+
+.footer__copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+  opacity: 0.7;
+}
+
+.icon svg {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.icon:hover svg {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 5px #f4ce13);
+}
+
+
+
+/* Responsividad */
+@media (max-width: 480px) {
+
+  .nav__link.show {
+    right: 0;
+}
+  .nav__link {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculta el menú fuera de la pantalla */
+    width: 70%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9); /* Fondo negro semi-transparente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: right 0.4s ease-in-out;
+}
+  .nav__link.active {
+    display: flex;
+}
+.nav__menu, .nav__close {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  cursor: pointer;
+}
+  .promo-container h1 {
+      font-size: 2rem; /* Reduce aún más el tamaño del título */
+  }
+
+  .promo-container p {
+      width: 100%; /* Aumenta el ancho del párrafo */
+      font-size: 1rem; /* Ajusta el tamaño del texto */
+  }
+
+  .btn {
+      font-size: 0.9rem; /* Ajusta el tamaño del botón */
+      padding: 10px 25px; /* Ajusta el padding */
+  }
+  .promo-container{
+  height:200px;
+}
+
+}
+@media (max-width: 600px) {
+  .nav__link.show {
+    right: 0;
+}
+  .nav__link {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculta el menú fuera de la pantalla */
+    width: 70%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9); /* Fondo negro semi-transparente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: right 0.4s ease-in-out;
+}
+  .nav__link.active {
+    display: flex;
+}
+.nav__menu, .nav__close {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  cursor: pointer;
+}
+  .promo-container h1{
+    font-size: 35px;
+  }
+  .nav {
+    display: block;
+  }
+
+  .logo {
+    width: 310px;
+    height: auto;
+  }
+
+  .container h1 {
+    font-size: 2.5rem;
+  }
+
+  .container p {
+    display: none;
+  }
+
+  .nav__menu {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .nav__img {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  main {
+    flex-direction: column; /* Apila las secciones en columnas */
+    align-items: center; /* Centra los elementos */
+  }
+
+  section {
+    width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    display: block;
+  }
+  .nav__menu, .nav__close {
+    display: none; /* Oculta los iconos */
+}
+
+.nav__link {
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.nav__links {
+    font-size: 1rem;
+}
+  .promo-container h1 {
+      font-size: 2.5rem; /* Reduce el tamaño del título en pantallas pequeñas */
+  }
+
+  .promo-container p {
+      width: 100%; /* Amplía el ancho del párrafo en pantallas más pequeñas */
+      font-size: 1.1rem; /* Ajusta el tamaño del texto */
+  }
+  .btn {
+    font-size: 1rem; /* Ajusta el tamaño del botón */
+    padding: 10px 30px; /* Ajusta el padding para pantallas más pequeñas */
+}
+  .footer__container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .nav--footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__form {
+    display: none;
+  }
+  .footer__copyright {
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav__img {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .nav {
+    display: block;
+  }
+
+  .logo {
+    width: 310px;
+    height: auto;
+  }
+
+  .container h1 {
+    padding-top: 50px;
+    font-size: 2.5rem;
+  }
+
+  .container p {
+    display: none;
+  }
+
+  .menubutton1,
+  .menubutton2 {
+    display: none;
+  }
+
+  .nav__menu {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .nav__close {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .logo {
+    width: 310px;
+    height: auto;
+  }
+
+  .nav__link--menu {
+    display: flex; /* Changed to flex */
+    position: fixed; /* Changed to fixed */
+    background-color: #000000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Ensure it's above other content */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s;
+  }
+  .nav__links {
+    display: none;
+  }
+  .nav__link--show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .about__main {
+    gap: 2em;
+  }
+
+  .about__icons:last-of-type {
+    grid-column: 1/-1;
+  }
+
+  .footer__container {
+    flex-wrap: wrap;
+  }
+
+  .nav--footer {
+    width: 100%;
+    justify-items: center;
+  }
+
+  .nav__link--footer {
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 0;
+  }
+
+  .footer__form {
+    display: none;
+  }
+
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  section {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  article {
+    max-width: 100%;
+  }
+  
+}
+
+@media (max-width: 1200px) {
+  .nav__link {
+    font-size: 16px;
+    display: flexbox;
+  }
+  .menubutton1,
+  .menubutton2 {
+    font-size: 18px;
+    width: 140px;
+  }
+
+  .logo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 210px;
+    height: auto;
+  }
+
+  .container h1 {
+    font-size: 2.3rem;
+  }
+
+  .container p {
+    margin: -15px 1%; /* Adjust margins for smaller screens */
+  }
+  .promo-container h1{
+    font-size: 35px;
+  }
+  .footer__img {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container h1 {
+    font-size: 2.5rem;
+  }
+
+  .container p {
+    margin: -15px 1%; /* Adjust margins for smaller screens */
+  }
+}
+
+@media (min-width: 1600px) {
+  
+  .container h1 {
+    font-size: 2.5rem;
+  }
+
+  .container p {
+    font-size: 20px;
+  }
+  .footer__container {
+    flex-direction: row; /* Coloca el nav y el formulario en fila */
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer__img {
+    width: 500px;
+  }
+
+  .footer__form {
+    top: 20px; /* Alineamos más cerca del contenedor principal */
+    right: 20px; /* Alineamos a la derecha */
+  }
+}
