@@ -88,26 +88,26 @@ article p {
 
 .section_img {
   width: 100%;
-  max-width: 350px; /* Ajusta el tamaño máximo */
-  height: auto; /* El alto depende del aspect ratio */
-  aspect-ratio: 16/9; /* Define una relación de aspecto fija (por ejemplo, 16:9) */
+  max-width: 350px; 
+  height: auto; 
+  aspect-ratio: 16/9;
   border-radius: 15px;
   overflow: hidden;
   position: relative;
 }
 
 .section_img img {
-  width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
-  height: 100%; /* Hace que la imagen ocupe toda la altura del contenedor */
-  object-fit: cover; /* Hace que la imagen cubra completamente el área sin distorsionarse */
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
   transition: transform 0.3s ease;
 }
 
 /* Nav */
 .nav {
   display: flex;
-  justify-content: space-between; /* Asegura que el logo se alinee a la izquierda y el menú a la derecha */
-  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: space-between; 
+  align-items: center; 
   font-family: "Poppins", sans-serif;
   background: #ffffff;
   padding: 20px 50px;
@@ -329,7 +329,7 @@ article p {
 /* Promo */
 .promo-container {
   position: relative;
-  background-image: url('/img/foodex.jpg');
+  background-image: url('https://clorostica.github.io/LittleLemon/img/foodex.jpg');
   background-size: cover;
   width: 100%;
   height: 530px; 
