@@ -88,18 +88,18 @@ article p {
 
 .section_img {
   width: 100%;
-  max-width: 350px; 
-  height: auto; 
-  aspect-ratio: 16/9;
+  max-width: 350px; /* Ajusta el tamaño máximo */
+  height: auto; /* El alto depende del aspect ratio */
+  aspect-ratio: 16/9; /* Define una relación de aspecto fija (por ejemplo, 16:9) */
   border-radius: 15px;
   overflow: hidden;
   position: relative;
 }
 
 .section_img img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
+  width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+  height: 100%; /* Hace que la imagen ocupe toda la altura del contenedor */
+  object-fit: cover; /* Hace que la imagen cubra completamente el área sin distorsionarse */
   transition: transform 0.3s ease;
 }
 
@@ -118,8 +118,8 @@ article p {
 }
 .nav {
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between; /* Asegura que el logo se alinee a la izquierda y el menú a la derecha */
+  align-items: center; /* Centra el contenido verticalmente */
   font-family: "Poppins", sans-serif;
   background: #ffffff;
   padding: 20px 50px;
@@ -341,12 +341,12 @@ article p {
 /* Promo */
 .promo-container {
   position: relative;
-  background-image: url('https://clorostica.github.io/LittleLemon2/img/foodex.jpg');
+  background-image: url('/img/foodex.jpg');
   background-size: cover;
   width: 100%;
   height: 530px; 
   display: flex;
-  flex-direction: column; 
+  flex-direction: column; /* Alineamos los elementos en una columna */
   justify-content: center; /* Centrado vertical */
   align-items: center; /* Centrado horizontal */
   text-align: center; /* Centra el texto */
@@ -558,14 +558,8 @@ article p {
   background-color: #f4ce13;
 }
 /* footer */
-.footer {
-  background-color: #111;
-  color: #fff;
-  padding: 60px 20px;
-  font-family: 'Poppins', sans-serif;
-}
-
 .footer__container {
+  background-color: #ffffff;
   width: 100%;
   display: flex;
   justify-content: space-between; /* Esto separa el logo y los enlaces */
@@ -605,15 +599,15 @@ article p {
   color: #ff9900;         
 }
 .footer__form {
-  position: absolute; /* Hace que el formulario se posicione sobre el contenedor */
-  top: 60px; /* Ajusta la distancia desde el top (ajusta según lo necesites) */
-  right: 20px; /* Se posiciona a la derecha del contenedor */
+  position: absolute; 
+  top: 60px; 
+  right: 20px; 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 15px;
-  width: 500px; /* Ajusta el tamaño del formulario */
+  width: 500px; 
   text-align: center;
 }
 
