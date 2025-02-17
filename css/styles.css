@@ -219,7 +219,7 @@ article p {
 /* Promo */
 .promo-container {
   position: relative;
-  background-image: url('/img/foodex.jpg');
+  background-image: url('https://clorostica.github.io/LittleLemon2/img/foodex.jpg');
   background-size: cover;
   width: 100%;
   height: 530px; /* Altura del contenedor */
