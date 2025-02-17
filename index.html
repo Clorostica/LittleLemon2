@@ -164,17 +164,21 @@
         <h3 class="footer__copyright">Derechos reservados Claudia Saez</h3>
         <script src="https://clorostica.github.io/LittleLemon2/js/menu.js"></script>
             <script>
-const navToggle = document.getElementById('nav-toggle'); // Botón hamburguesa
-const navMenu = document.getElementById('nav-menu');     // Menú desplegable
-const closeMenu = document.getElementById('close-menu'); // Botón para cerrar el menú (X)
+                const navToggle = document.getElementById('nav-toggle'); // Botón hamburguesa
+        const navMenu = document.getElementById('nav-menu');     // Menú desplegable
+        const closeMenu = document.getElementById('close-menu'); // Botón para cerrar el menú (X)
 
-// Abrir el menú cuando se hace clic en el botón hamburguesa
-navToggle.addEventListener('click', () => {
-  navMenu.style.transform = 'translateX(0)';
-  navMenu.style.opacity = '1';
-  navMenu.style.visibility = 'visible';
-  navToggle.classList.add('open'); // Cambiar el icono a "X"
-});
+        // Abrir el menú cuando se hace clic en el botón hamburguesa
+        navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('open');  // Toggle de la clase open
+        navToggle.classList.toggle('open'); // Cambiar el icono a "X"
+        });
+
+        // Cerrar el menú cuando se hace clic en la "X"
+        closeMenu.addEventListener('click', () => {
+        navMenu.classList.remove('open');  // Remover la clase open
+        navToggle.classList.remove('open'); // Volver al icono de hamburguesa
+        });
 
 // Cerrar el menú cuando se hace clic en la "X"
 closeMenu.addEventListener('click', () => {
