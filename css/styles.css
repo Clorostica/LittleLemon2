@@ -352,22 +352,6 @@ article p {
   padding: 0 20px;
 }
 /* Contenedor de la promoción */
-.promo-container {
-  position: relative;
-  background-image: url('/img/foodex.jpg');
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 5vh 5vw; 
-}
-
-/* Contenedor de la promoción */
 .promo-background {
   position: relative;
   width: 80%;
