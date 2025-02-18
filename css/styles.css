@@ -88,18 +88,18 @@ article p {
 
 .section_img {
   width: 100%;
-  max-width: 350px; /* Ajusta el tamaño máximo */
-  height: auto; /* El alto depende del aspect ratio */
-  aspect-ratio: 16/9; /* Define una relación de aspecto fija (por ejemplo, 16:9) */
+  max-width: 350px; 
+  height: auto; 
+  aspect-ratio: 16/9; 
   border-radius: 15px;
   overflow: hidden;
   position: relative;
 }
 
 .section_img img {
-  width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
-  height: 100%; /* Hace que la imagen ocupe toda la altura del contenedor */
-  object-fit: cover; /* Hace que la imagen cubra completamente el área sin distorsionarse */
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
   transition: transform 0.3s ease;
 }
 
@@ -118,8 +118,8 @@ article p {
 }
 .nav {
   display: flex;
-  justify-content: space-between; /* Asegura que el logo se alinee a la izquierda y el menú a la derecha */
-  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: space-between; 
+  align-items: center; 
   font-family: "Poppins", sans-serif;
   background: #ffffff;
   padding: 20px 50px;
@@ -149,9 +149,9 @@ article p {
 
 .nav__link:hover {
   color: white;
-  background-color: #f8c12f; /* Amarillo al hacer hover */
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
+  background-color: #f8c12f; 
+  transform: scale(1.05); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .nav__item:hover .nav__link {
@@ -263,14 +263,13 @@ article p {
 /* Estilo para el botón en pantallas pequeñas */
 @media (max-width: 768px) {
   .nav__list {
-    display: none; /* Ocultamos el menú principal en pantallas pequeñas */
+    display: none; 
   }
 
   .nav__toggle {
-    display: block; /* Mostramos el botón de menú hamburguesa */
+    display: block; 
   }
 
-  /* Cuando el menú se abre, cambiamos la visibilidad */
   .nav__link--menu {
     opacity: 1;
     visibility: visible;
@@ -299,16 +298,16 @@ article p {
 }
 @media (min-width: 1024px) {
   .nav {
-    justify-content: space-between; /* Alinea el logo a la izquierda y el menú a la derecha */
+    justify-content: space-between; 
   }
 
   .logo {
-    flex: 1; /* El logo ocupa todo el espacio disponible para estar a la izquierda */
+    flex: 1; 
   }
 
   .nav__list {
-    margin-left: auto; /* Empuja el menú hacia la derecha */
-    padding-left: 40px; /* Puedes aumentar este valor para crear más espacio a la izquierda */
+    margin-left: auto;
+    padding-left: 40px; 
   }
 }
 .menu-icon {
@@ -347,11 +346,11 @@ article p {
   width: 100%;
   height: 530px; 
   display: flex;
-  flex-direction: column; /* Alineamos los elementos en una columna */
-  justify-content: center; /* Centrado vertical */
-  align-items: center; /* Centrado horizontal */
-  text-align: center; /* Centra el texto */
-  padding: 0 20px; /* Opcional: para añadir un poco de espacio en los bordes */
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  padding: 0 20px;
 }
 /* Contenedor de la promoción */
 .promo-container {
@@ -360,21 +359,21 @@ article p {
   background-size: cover;
   background-position: center;
   width: 100%;
-  min-height: 50vh; /* Usa altura mínima en vez de fija */
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 5vh 5vw; /* Espaciado adaptable */
+  padding: 5vh 5vw; 
 }
 
 /* Contenedor de la promoción */
 .promo-background {
   position: relative;
   width: 80%;
-  max-width: 900px; /* Máximo para evitar que sea demasiado ancho en pantallas grandes */
-  min-height: 40vh; /* Altura mínima en móviles */
+  max-width: 900px; 
+  min-height: 40vh; 
   padding: 5% 5%;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
