@@ -573,6 +573,7 @@ article p {
   max-width: 100%; /* Asegura que el logo no se desborde */
   height: auto; /* Mantiene la relación de aspecto */
   margin-bottom: 20px;
+  padding-left:40px;
 }
 
 .nav__link--footer {
@@ -837,7 +838,7 @@ article p {
     font-size: 35px;
   }
   .footer__img {
-    width: 400px;
+    width: 350px;
   }
 }
 
