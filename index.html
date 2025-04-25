@@ -20,7 +20,7 @@
             <span class="nav__toggle-line"></span>
           </button>
           
-          <!-- Menú desplegable -->
+
           <div id="nav-menu" class="nav__link--menu">
             <button id="close-menu" class="close-menu">&times;</button>
             <ul>
@@ -31,7 +31,7 @@
             </ul>
           </div>
     
-          <!-- Menú horizontal (en pantallas grandes) -->
+
           <ul class="nav__list">
             <li class="nav__item"><a href="#" class="nav__link">Inicio</a></li>
             <li class="nav__item"><a href="#" class="nav__link">Sobre nosotros</a></li>
@@ -164,29 +164,28 @@
         <h3 class="footer__copyright">Derechos reservados Claudia Saez</h3>
         <script src="https://clorostica.github.io/LittleLemon2/js/menu.js"></script>
             <script>
-                const navToggle = document.getElementById('nav-toggle'); // Botón hamburguesa
-        const navMenu = document.getElementById('nav-menu');     // Menú desplegable
-        const closeMenu = document.getElementById('close-menu'); // Botón para cerrar el menú (X)
+        const navToggle = document.getElementById('nav-toggle'); 
+        const navMenu = document.getElementById('nav-menu');     
+        const closeMenu = document.getElementById('close-menu'); 
 
-        // Abrir el menú cuando se hace clic en el botón hamburguesa
+
         navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('open');  // Toggle de la clase open
-        navToggle.classList.toggle('open'); // Cambiar el icono a "X"
+        navMenu.classList.toggle('open');  
+        navToggle.classList.toggle('open'); 
         });
 
-        // Cerrar el menú cuando se hace clic en la "X"
+
         closeMenu.addEventListener('click', () => {
-        navMenu.classList.remove('open');  // Remover la clase open
-        navToggle.classList.remove('open'); // Volver al icono de hamburguesa
+        navMenu.classList.remove('open');  
+        navToggle.classList.remove('open'); 
         });
 
-// Cerrar el menú cuando se hace clic en la "X"
-closeMenu.addEventListener('click', () => {
-  navMenu.style.transform = 'translateX(-100%)';
-  navMenu.style.opacity = '0';
-  navMenu.style.visibility = 'hidden';
-  navToggle.classList.remove('open'); // Volver al icono de hamburguesa
-});
+        closeMenu.addEventListener('click', () => {
+          navMenu.style.transform = 'translateX(-100%)';
+          navMenu.style.opacity = '0';
+          navMenu.style.visibility = 'hidden';
+          navToggle.classList.remove('open'); 
+        });
             </script>
     </footer>
 </body>
