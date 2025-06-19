@@ -80,10 +80,8 @@
         }
 
         .nav__link:hover {
-            color: white;
-            background-color: #f8c12f;
+            color: f8c12f;
             transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Mobile Menu Styles */
