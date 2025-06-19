@@ -353,9 +353,8 @@ article p {
 .footer__container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap; 
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .footer__img {
@@ -459,11 +458,8 @@ article p {
   padding: 0;
 }
 .footer-container{
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  background-color: lightcoral;
-  margin-right: 10px;
+ flex: 1;
+  min-width: 250px;
 }
 @keyframes fadeInUp {
   0% {
