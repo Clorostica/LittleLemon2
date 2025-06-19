@@ -458,6 +458,13 @@ article p {
   margin: 0;
   padding: 0;
 }
+.footer-container{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: lightcoral;
+  margin-right: 10px;
+}
 @keyframes fadeInUp {
   0% {
     opacity: 0;
