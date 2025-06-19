@@ -515,6 +515,25 @@ nav__link--footer{
                 padding: 0.5rem 0;
                 border-bottom: 1px solid #eee;
             }
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav--footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav__link--footer {
+    align-items: center;
+  }
+
+  .footer__form {
+    align-items: center;
+    text-align: center;
+  }
   main {
     grid-template-columns: 1fr;
     padding: 20px;
@@ -565,11 +584,6 @@ nav__link--footer{
     flex-direction: column;
     text-align: center;
     padding: 30px 15px;
-  }
-
-  .footer__form {
-  flex: 1;
-  max-width: 400px;
   }
 }
 
