@@ -459,9 +459,6 @@ nav__link--footer{
   #nav-menu{
   display: block;
 }
-  .nav__list {
-    display: none;
-  }
 
   .nav__toggle {
     display: flex;
@@ -474,7 +471,22 @@ nav__link--footer{
   .nav__link--menu.open {
     display: flex;
   }
+  .nav__list {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
 
+  .nav__list.open {
+    display: flex;
+  }
   main {
     grid-template-columns: 1fr;
     padding: 20px;
