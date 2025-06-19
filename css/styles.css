@@ -433,7 +433,11 @@ article p {
   background: #111111;
   color: #ffffff;
 }
-
+nav__link--footer{
+  display: flex; 
+  list-style: none; 
+  margin: 0;
+}
 @keyframes fadeInUp {
   0% {
     opacity: 0;
