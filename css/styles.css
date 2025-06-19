@@ -458,8 +458,11 @@ article p {
   padding: 0;
 }
 .footer-container{
- flex: 1;
-  min-width: 250px;
+ flex: 1;                
+  min-width: 280px;          
+  padding: 1rem;             
+  background-color: lightcoral; 
+  box-sizing: border-box; 
 }
 @keyframes fadeInUp {
   0% {
