@@ -164,23 +164,24 @@
         <h3 class="footer__copyright">Derechos reservados Claudia Saez</h3>
         <script src="https://clorostica.github.io/LittleLemon2/js/menu.js"></script>
             <script>
-            document.addEventListener('DOMContentLoaded', () => {
-              const toggle = document.querySelector('.nav__toggle');
-              const menu = document.querySelector('.nav__link--menu');
-              
-              toggle.addEventListener('click', () => {
-                toggle.classList.toggle('open');
-                menu.classList.toggle('open');
-              });
-            
-              menu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                  toggle.classList.remove('open');
-                  menu.classList.remove('open');
-                });
-              });
-            });
-            </script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.nav__toggle');
+    const menu = document.querySelector('#nav-menu'); 
+
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        menu.classList.remove('open');
+      });
+    });
+  });
+</script>
+
     </footer>
 </body>
 </html>
