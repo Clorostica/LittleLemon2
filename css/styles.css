@@ -49,7 +49,7 @@ p {
   z-index: 1000;
 }
 #nav-menu {
-  display: block; 
+  display: none; 
 }
 .logo img {
   width: 250px;
@@ -82,7 +82,15 @@ p {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
+nav__items{
+    text-decoration: none;
+  color: #6a6a6a;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  display: block;
+}
 .nav__toggle {
   display: none;
   background: none;
