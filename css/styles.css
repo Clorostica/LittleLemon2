@@ -441,7 +441,7 @@ article p {
   color: #ffffff;
 }
 .nav--footer {
-  display: flex;
+  display: block;
   align-items: flex-start;
   gap: 1.5rem;
   max-width: 600px;
