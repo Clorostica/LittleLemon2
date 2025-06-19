@@ -466,40 +466,55 @@ nav__link--footer{
 }
 
 @media (max-width: 768px) {
-  .nav__link{
-    display:none;
-  }
-  #nav-menu{
-  display: block;
-}
-
-  .nav__toggle {
-    display: flex;
-  }
-
-  .nav__link--menu {
-    display: none;
-  }
-
-  .nav__link--menu.open {
-    display: flex;
-  }
-  .nav__list {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 999;
-  }
-
-  .nav__list.open {
-    display: flex;
-  }
+      .nav__toggle {
+                display: flex;
+            }
+            
+            .nav__list {
+                display: none;
+            }
+            
+            .nav__link--menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: white;
+                display: flex;
+                flex-direction: column;
+                padding: 2rem;
+                transition: right 0.3s ease;
+                z-index: 1000;
+                box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+            }
+            
+            .nav__link--menu.open {
+                right: 0;
+            }
+            
+            .close-menu {
+                display: block;
+                align-self: flex-end;
+                background: none;
+                border: none;
+                font-size: 2rem;
+                cursor: pointer;
+                margin-bottom: 2rem;
+            }
+            
+            .nav__link--menu ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .nav__link--menu .nav__link {
+                font-size: 1.2rem;
+                padding: 0.5rem 0;
+                border-bottom: 1px solid #eee;
+            }
   main {
     grid-template-columns: 1fr;
     padding: 20px;
