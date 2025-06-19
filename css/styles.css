@@ -413,7 +413,8 @@ article p {
 
 .footer__submit:hover {
   background-color: #e0b800;
-  transform: scale(1.05);    
+  transform: scale(1.05);   
+  color: #000000;
 }
 
 .footer__social {
