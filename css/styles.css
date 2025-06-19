@@ -398,6 +398,7 @@ article p {
 }
 
 .footer__submit {
+  font-family: "Poppins", sans-serif;
   background-color: #f4ce13;
   color: #ffffff;
   border: none;
