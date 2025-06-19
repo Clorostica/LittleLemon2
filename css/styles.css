@@ -57,6 +57,24 @@ ul{
 #nav-menu {
   display: none; 
 }
+.btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #f4ce14;  
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #e0b800;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
 .logo img {
   width: 250px;
   height: auto;
