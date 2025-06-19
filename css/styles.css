@@ -527,15 +527,21 @@ article p {
                 padding: 0.5rem 0;
                 border-bottom: 1px solid #eee;
             }
-  .footer__container {
+    .footer__container {
   display: flex;
-  justify-content: space-between;
-  gap: 20px; 
+  justify-content: center;        
+  align-items: flex-start;
+  gap: 40px;                       
+  padding: 40px 20px;             
+  max-width: 1200px;              
+  margin: 0 auto;                  
+  box-sizing: border-box;
 }
 
 .footer__left,
 .footer__right {
-  width: 48%; 
+  flex: 1;                        
+  max-width: 500px;              
 }
 
   .nav--footer {
