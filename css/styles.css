@@ -48,7 +48,9 @@ p {
   top: 0;
   z-index: 1000;
 }
-
+nav-menu{
+  display: none;
+}
 .logo img {
   width: 250px;
   height: auto;
