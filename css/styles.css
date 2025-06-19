@@ -467,7 +467,9 @@ nav__link--footer{
 }
 
 @media (max-width: 768px) {
-  
+  .nav__link{
+    display:none;
+  }
   #nav-menu{
   display: block;
 }
