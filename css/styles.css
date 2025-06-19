@@ -412,7 +412,7 @@ article p {
 
 .footer__submit:hover {
   background-color: #e0b800;
-  transform: scale(1.05);     /* Ligeramente más grande al pasar el mouse */
+  transform: scale(1.05);    
 }
 
 .footer__social {
