@@ -401,15 +401,18 @@ article p {
   background-color: #f4ce13;
   color: #000;
   border: none;
-  padding: 12px 30px;
-  border-radius: 8px;
+  padding: 14px 40px;       
+  font-size: 1.1rem;          
+  border-radius: 10px;       
   cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+  font-weight: 700;          
+  margin-top: 10px;         
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .footer__submit:hover {
   background-color: #e0b800;
+  transform: scale(1.05);     /* Ligeramente más grande al pasar el mouse */
 }
 
 .footer__social {
