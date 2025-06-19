@@ -484,71 +484,66 @@ footer{
 }
 
 @media (max-width: 768px) {
-      .nav__toggle {
-                display: flex;
+.nav__toggle {
+display: flex;
             }
             
-            .nav__list {
-                display: none;
+.nav__list {
+display: none;
             }
             
-            .nav__link--menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 70%;
-                height: 100vh;
-                background: white;
-                display: flex;
-                flex-direction: column;
-                padding: 2rem;
-                transition: right 0.3s ease;
-                z-index: 1000;
-                box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+.nav__link--menu {
+position: fixed;
+top: 0;
+right: -100%;
+width: 70%;
+height: 100vh;
+background: white;
+display: flex;
+flex-direction: column;
+padding: 2rem;
+transition: right 0.3s ease;
+z-index: 1000;
+box-shadow: -2px 0 10px rgba(0,0,0,0.1);
             }
             
-            .nav__link--menu.open {
-                right: 0;
+.nav__link--menu.open {
+right: 0;
+}
+            
+.close-menu {
+display: block;
+align-self: flex-end;
+background: none;
+border: none;
+font-size: 2rem;
+cursor: pointer;
+margin-bottom: 2rem;
             }
             
-            .close-menu {
-                display: block;
-                align-self: flex-end;
-                background: none;
-                border: none;
-                font-size: 2rem;
-                cursor: pointer;
-                margin-bottom: 2rem;
+.nav__link--menu ul {
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
             }
             
-            .nav__link--menu ul {
-                list-style: none;
-                display: flex;
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            
-            .nav__link--menu .nav__link {
-                font-size: 1.2rem;
-                padding: 0.5rem 0;
-                border-bottom: 1px solid #eee;
-            }
+.nav__link--menu .nav__link {
+font-size: 1.2rem;
+padding: 0.5rem 0;
+border-bottom: 1px solid #eee;
+ }
     .footer__container {
-  display: flex;
-  justify-content: center;        
-  align-items: flex-start;
-  gap: 40px;                       
-  padding: 40px 20px;             
-  max-width: 1200px;              
-  margin: 0 auto;                  
-  box-sizing: border-box;
+  flex-direction: column;
+    align-items: center; 
+    text-align: center;
 }
 
 .footer__left,
-.footer__right {
-  flex: 1;                        
-  max-width: 500px;              
-}
+  .footer__right {
+    width: 100%;
+    margin-bottom: 15px; 
+  }
 
   .nav--footer {
     flex-direction: column;
