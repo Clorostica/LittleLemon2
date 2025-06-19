@@ -433,6 +433,11 @@ article p {
   background: #111111;
   color: #ffffff;
 }
+nav--footer{
+ display: flex; 
+  list-style: none; 
+  margin: 0;
+}
 nav__link--footer{
   display: flex; 
   list-style: none; 
