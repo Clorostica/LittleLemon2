@@ -12,25 +12,6 @@
 
 ---
 
-## 📁 Project Structure
-
-LittleLemon2/
-├── css/
-│ └── styles.css
-├── js/
-│ ├── java.js
-│ ├── corrousel.js
-│ └── menu.js
-├── img/
-│ └── [Site images]
-├── index.html
-
-yaml
-Copiar
-Editar
-
----
-
 ## 🧩 Features
 
 - **Responsive Design**: Mobile and desktop friendly layout.
