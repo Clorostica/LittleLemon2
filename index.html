@@ -162,28 +162,40 @@
         </div>
         <h3 class="footer__copyright">Derechos reservados Claudia Saez</h3>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const toggle = document.getElementById('nav-toggle');
-        const menu = document.getElementById('nav-menu');
-        const closeBtn = document.getElementById('close-menu');
-        
-        toggle.addEventListener('click', () => {
-            toggle.classList.toggle('open');
-            menu.classList.toggle('open');
-        });
-        
-        closeBtn.addEventListener('click', () => {
-            toggle.classList.remove('open');
-            menu.classList.remove('open');
-        });
-        
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
+        // Mobile Menu Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('nav-toggle');
+            const menu = document.getElementById('nav-menu');
+            const closeBtn = document.getElementById('close-menu');
+            
+            // Toggle menu
+            toggle.addEventListener('click', () => {
+                toggle.classList.toggle('open');
+                menu.classList.toggle('open');
+            });
+            
+            // Close menu with X button
+            closeBtn.addEventListener('click', () => {
                 toggle.classList.remove('open');
                 menu.classList.remove('open');
             });
+            
+            // Close menu when clicking on links
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    toggle.classList.remove('open');
+                    menu.classList.remove('open');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                    toggle.classList.remove('open');
+                    menu.classList.remove('open');
+                }
+            });
         });
-    });
 </script>
 
     </footer>
