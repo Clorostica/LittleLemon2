@@ -450,6 +450,10 @@ nav__link--footer{
 }
 
 @media (max-width: 768px) {
+  
+  #nav-menu{
+  display: block;
+}
   .nav__list {
     display: none;
   }
