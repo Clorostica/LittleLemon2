@@ -364,7 +364,6 @@ article p {
 }
 
 .footer__form {
-  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
